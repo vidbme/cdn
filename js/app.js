@@ -1,6 +1,5 @@
 requirejs.config({
-    'appDir': '.',
-    'baseUrl': 'js',
+    'baseUrl': '//cdn.vidb.me/js',
     'paths': {
       'jquery': ['//cdn.vidb.me/js/jquery','https://code.jquery.com/jquery-3.2.1.min.js'],
       'popper': ['//cdn.vidb.me/js/popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'],
