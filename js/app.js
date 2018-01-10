@@ -17,7 +17,7 @@ requirejs.config({
  
 require(["popper"],function(p){
   window.Popper = p;
-  require(["app/main"],function(app){
+  require(["app"],function(app){
     window.mainApp = app;
   });
 });
