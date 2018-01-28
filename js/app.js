@@ -1,23 +1,25 @@
 requirejs.config({
-    'baseUrl': '//cdn.vidb.me/js',
-    'paths': {
-      'jquery': ['//cdn.vidb.me/js/jquery','https://code.jquery.com/jquery-3.2.1.min.js'],
-      'popper': ['//cdn.vidb.me/js/popper','https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'],
-      'app': ['//cdn.vidb.me/js/app'],
-      'bootstrap': ['//cdn.vidb.me/js/bootstrap.min','https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js']
-    },
-    'shim': {
-        'bootstrap': {
-        	'deps': ['jquery','popper'],
-        	'exports': '$'
-        	 },
-        'main': { 'deps': ['jquery','bootstrap'] }
-    }
+	baseUrl: ".",
+	paths: {
+		jquery: "https://code.jquery.com/jquery-3.3.1.min",
+		popper: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min",
+		bootstrap: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min",
+		fontawesome: "https://use.fontawesome.com/releases/v5.0.6/js/all",
+		recaptcha: "https://www.google.com/recaptcha/api"
+	},
+	shim : {
+		bootstrap: ["jquery"]
+	},
+	waitSeconds: 15
 });
- 
-require(['popper'],function(p){
-  window.Popper = p;
-  require(['app'],function(app){
-    window.mainApp = app;
-  });
+require(["jquery"], function($) {
+	$(".preload").fadeOut("slow");
+	require(["bootstrap"], function(bootstrap) {
+		$('[data-toggle="tooltip"]').tooltip();
+		$('#pop-login').on('shown.bs.modal', function (e) {
+		});
+	});
+});
+require(["fontawesome"],function(fontawesome){
+	window.Fontawesome = fontawesome;
 });
