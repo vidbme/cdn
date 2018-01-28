@@ -1,10 +1,10 @@
 requirejs.config({
 	baseUrl: ".",
 	paths: {
-		jquery: "https://code.jquery.com/jquery-3.3.1.min",
-		popper: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min",
-		bootstrap: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min",
-		fontawesome: "https://use.fontawesome.com/releases/v5.0.6/js/all",
+		jquery: "//cdn.vidb.me/js/jquery-3.3.1.min",
+		popper: "//cdn.vidb.me/js/popper.min",
+		bootstrap: "//cdn.vidb.me/js/bootstrap.bundle.min",
+		fontawesome: "//cdn.vidb.me/js/fa-solid.min",
 		recaptcha: "https://www.google.com/recaptcha/api"
 	},
 	shim : {
